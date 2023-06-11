@@ -1,0 +1,21 @@
+Assignment 1 Report
+
+draw()
+
+Initially clears the terminal before drawing the game map printing '*' as the border, '>' for the head of the snake, '-' for the body/tail, '@' for the food, and ' ' for the blank space, below the map the score count is also shown and printed as 'Score: x'
+
+setup()
+
+spawns the food at a random point, configuring the x and y coordinates of the food to random points within the boundary, height and width. This is only accomplished under the condition that the coordinates of the food is within boundary.
+
+input()
+
+the system takes a character input, specifically the WASD keys to control the snake and its movement.The variable flag determines in which direction the snake moves.
+
+logic()
+
+the previous, and 2 previous x and y coordinates for the snake are declared. The input and movement system manipulates x and y coordinates. The player loses the game on the condition that the snake hits its own tail, the snake hits/crosses the boundary. If the snake hits the coordinates of the food, the score count is updated and the length of the snake is increased. The food is then randomly spawned on the map as per the initial conditions.
+
+main()
+
+driver function that accepts command line arguments corresponding the map width, height, and snake length. The map is then set up accordingly, and while under the condition that the player has not lost (gameOver != 0), the map is drawn adhering the logic of the game with the player being able to play by using input system.
